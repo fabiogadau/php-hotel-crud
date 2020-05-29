@@ -6,6 +6,12 @@
    @include __DIR__ . '/partials/templates/head.php';
 ?>
 
+<?php // ALERTS
+   if ( !empty($_GET['delete']) ){ ?>
+      <div class="alert alert-success">Stanza cancellata con successo</div>
+  <?php }
+?>
+
 <!-- MAIN CONTENT -->
 <main class="container">
    <div class="row">
@@ -37,7 +43,12 @@
                               <a class="text-success" href="./show.php?id=<?php echo $room['id']; ?>">View</a>
                            </td>
                            <td class="text-primary">Update</td>
-                           <td class="text-danger">Delete</td>
+                           <td class="text-danger">
+                              <form action="./partials/delete/server-delete.php" method="POST">
+                                 <input type="hidden" name="id" value="<?php echo $room['id']; ?>">
+                                 <input class="btn btn-danger" type="submit" value="Delete">
+                              </form>
+                           </td>
                         </tr>
                      <?php }
                   }

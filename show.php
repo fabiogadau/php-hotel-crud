@@ -33,9 +33,6 @@
                </li>
             </ul>
          </div>
-
-         <!-- 'Return to home' Link -->
-         <a href="./">&lt; Return to home</a>
       </div>
    </div>
 </main>
