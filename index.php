@@ -40,9 +40,15 @@
                            <td><?php echo $room['room_number']; ?></td>
                            <td><?php echo $room['floor']; ?></td>
                            <td>
-                              <a class="text-success" href="./show.php?id=<?php echo $room['id']; ?>">View</a>
+                              <a class="text-success" href="./show.php?id=<?php echo $room['id']; ?>">
+                                 View
+                              </a>
                            </td>
-                           <td class="text-primary">Update</td>
+                           <td>
+                              <a class="text-primary" href="./edit.php?id=<?php echo $room['id']; ?>">
+                                 Update
+                              </a>
+                           </td>
                            <td class="text-danger">
                               <form action="./partials/delete/server-delete.php" method="POST">
                                  <input type="hidden" name="id" value="<?php echo $room['id']; ?>">

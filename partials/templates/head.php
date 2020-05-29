@@ -21,7 +21,7 @@
          <ul class="navbar-nav">
             <li class="nav-item active">
                <a class="nav-link" href="<?php echo $base_path; ?>">
-                  Torna alle stanze
+                  Return to rooms
                </a>
             </li>
          </ul>

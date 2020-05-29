@@ -4,7 +4,7 @@
 
    // Get room ID
    if ( empty($_POST['id']) ){
-      die('ID non corretto');
+      die('Incorrect ID');
    }
 
    $id_room = $_POST['id'];

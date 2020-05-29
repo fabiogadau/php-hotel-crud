@@ -33,6 +33,12 @@
                </li>
             </ul>
          </div>
+
+         <!-- Return to Update -->
+         <a class="btn btn-primary" href="<?php echo $base_path; ?>/edit.php?id=<?php echo $room['id']; ?>">
+            Update
+         </a>
+
       </div>
    </div>
 </main>
