@@ -2,25 +2,16 @@
    // Connect to database
    @include __DIR__ . '/../database.php';
 
+   // Utilities
+   @include __DIR__ . '/../functions.php';
+
    // Get room ID
    if ( empty($_POST['id']) ){
       die('Incorrect ID');
    }
 
    $id_room = $_POST['id'];
+   $url = "$base_path?delete=room";
 
-   // Delete Room
-   $sql = "DELETE FROM `stanze` WHERE `id` = $id_room";
-   $result = $connection->query($sql);
-
-   var_dump($connection->affected_rows);
-
-   if ( $result && $connection->affected_rows > 0 ){
-      header("Location: $base_path?delete=1");
-   }
-   elseif ( $result ){
-      echo 'No results';
-   }
-   else {
-      echo 'Query error';
-   }
+   // Delete room Query
+   removebyId($connection, 'stanze', $id_room, $url);

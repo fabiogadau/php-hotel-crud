@@ -34,6 +34,11 @@
                <input type="hidden" name="id" value="<?php echo $room['id']; ?>">
                <input class="btn btn-primary" type="submit" value="Save">
             </div>
+
+            <!-- Return to Details -->
+            <a class="btn btn-primary" href="<?php echo $base_path; ?>show.php?id=<?php echo $room['id']; ?>">
+               Details
+            </a>
          </form>
       </div>
    </div>
